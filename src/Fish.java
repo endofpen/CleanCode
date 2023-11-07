@@ -4,12 +4,9 @@ import java.util.Optional;
 import java.util.Random;
 
 public class Fish extends OceanAnimals {
-    private int weight;
     private final List<String> blockingOceanCellContent = List.of("Shark", "Fish", "Rock");
-
     public Fish(int weight, String kindOfCellContent, OceanCell currentOceanCell) {
-        super(kindOfCellContent, currentOceanCell);
-        this.weight = weight;
+        super(kindOfCellContent, currentOceanCell,weight);
     }
 
     @Override
@@ -20,6 +17,7 @@ public class Fish extends OceanAnimals {
         ArrayList<OceanCellContent> neighboringOceanCellContents = neighboringOceanCellOptional.get().getCellContent();
         if (!isMovingInNeighboringCellPossible(neighboringOceanCellContents)) return;
         moveFromCurrentOceanCellToNeighboringCell(currentOceanCell, neighboringOceanCellOptional.get());
+        loseWeight();
     }
 
     private boolean isMovingInNeighboringCellPossible(ArrayList<OceanCellContent> neighboringOceanCellContents) {
@@ -37,7 +35,7 @@ public class Fish extends OceanAnimals {
     }
 
     private Directions calculateNewDirection() {
-        int randomDirectionKey = new Random().nextInt(1 - 5);
+        int randomDirectionKey = new Random().nextInt(1, 4);
         return DirectionService.getInstance().retrieveDirectionByKey(randomDirectionKey);
     }
 

@@ -1,6 +1,6 @@
 abstract class OceanCellContent {
     private final String kindOfCellContent;
-    protected final OceanCell currentOceanCell;
+    protected OceanCell currentOceanCell;
 
     public OceanCellContent(String kindOfCellContent, OceanCell currentOceanCell) {
         this.kindOfCellContent = kindOfCellContent;
