@@ -5,7 +5,6 @@ abstract class OceanCellContent {
     public OceanCellContent(String kindOfCellContent, OceanCell currentOceanCell) {
         this.kindOfCellContent = kindOfCellContent;
         this.currentOceanCell = currentOceanCell;
-        System.out.println("Constructor OceanCellContent");
     }
 
     public void clearFromCurrentCell() {

@@ -7,8 +7,7 @@ public class Fish extends OceanAnimal {
     private final List<String> blockingOceanCellContent = List.of("Shark", "Fish", "Rock");
 
     public Fish(int weight, String kindOfCellContent, OceanCell currentOceanCell) {
-        super(kindOfCellContent, currentOceanCell,weight);
-        System.out.println("Constructor Fish");
+        super(kindOfCellContent, currentOceanCell, weight);
     }
 
     @Override
@@ -41,7 +40,6 @@ public class Fish extends OceanAnimal {
         return DirectionService.getInstance().retrieveDirectionByKey(randomDirectionKey);
     }
 
-
     private void eatPlanktonIfPresent(ArrayList<OceanCellContent> neighboringOceanCellContents) {
         Optional<OceanCellContent> optionalOceanCellContentWithPlankton = searchThroughOceanCellContentsForPlankton(neighboringOceanCellContents);
         if (optionalOceanCellContentWithPlankton.isEmpty()) return;
@@ -57,9 +55,6 @@ public class Fish extends OceanAnimal {
 
     private void grow(int nutritionValue) {
         this.weight += nutritionValue;
-    }
-    public void getAttributes(){
-        System.out.println(this.weight + " " +this.currentOceanCell +" "+" i am Fish");
     }
 
 }

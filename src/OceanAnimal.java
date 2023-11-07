@@ -5,7 +5,6 @@ public abstract class OceanAnimal extends OceanCellContent {
     public OceanAnimal(String kindOfCellContent, OceanCell currentOceanCell, int weight) {
         super(kindOfCellContent, currentOceanCell);
         this.weight = weight;
-        System.out.println("Constructor animal cells");
     }
 
     protected void loseWeight() {
