@@ -6,7 +6,7 @@ public class Plankton extends OceanCellContent{
         this.nutritionValue = nutritionValue;
     }
 
-    public int retrieveNutritionValueAndClearCellContent(){
+    public int retrieveNutritionValueAndRemovePlanktonFromOceanCell(){
     currentOceanCell.eraseOceanCellContentFromOceanCell(this);
     return nutritionValue;
     }

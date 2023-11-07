@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class Ocean {
     private static Ocean instance;
@@ -9,8 +10,8 @@ public class Ocean {
         if (instance == null) instance = new Ocean();
         return instance;
     }
-    public OceanCell retrieveNeighborOceanCell(OceanCellContent currentOceanCell, Directions direction){
-        return null;
+    public Optional<OceanCell> retrieveNeighborOceanCell(OceanCellContent currentOceanCell, Directions direction){
+        return Optional.empty();
     }
     public ArrayList<OceanCell> getOceanContent(){
         return new ArrayList<OceanCell>();

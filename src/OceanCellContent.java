@@ -1,6 +1,6 @@
 abstract class OceanCellContent {
     private final String kindOfCellContent;
-    protected OceanCell currentOceanCell;
+    protected final OceanCell currentOceanCell;
 
     public OceanCellContent(String kindOfCellContent, OceanCell currentOceanCell) {
         this.kindOfCellContent = kindOfCellContent;
@@ -12,7 +12,6 @@ abstract class OceanCellContent {
     }
 
     abstract public void executeNextSimulationTurn();
-
 
     public String getKindOfCellContent() {
         return this.kindOfCellContent;
