@@ -9,10 +9,11 @@ public class Ocean {
         if (instance == null) instance = new Ocean();
         return instance;
     }
-    public static OceanCell retrieveNeighborOceanCell(OceanCellContent currentOceanCell, int direction){
+    public OceanCell retrieveNeighborOceanCell(OceanCellContent currentOceanCell, int direction){
         return null;
     }
-    public static ArrayList<OceanCell> getOceanContent(){
+    public ArrayList<OceanCell> getOceanContent(){
         return new ArrayList<OceanCell>();
     }
+
 }

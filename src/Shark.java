@@ -6,7 +6,7 @@ public class Shark implements IOceanAnimals{
     }
 
     @Override
-    public void executeTurn() {
+    public void executeNextSimulationTurn() {
 
     }
 

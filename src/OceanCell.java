@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class OceanCell {
     private ArrayList<OceanCellContent> cellContent;
@@ -8,13 +7,11 @@ public class OceanCell {
         this.cellContent = cellContent;
     }
 
-    public void putOceanCellContentIntoOceanCell(OceanCellContent newOceanCellContent){
+    public void eraseOceanCellContentFromOceanCell(OceanCellContent oceanCellContentToErase){
 
     }
 
-    public void eraseOceanCellContentFromOceanCell(OceanCellContent oldOceanCellContent){
-
-    }
+    public void putNewOceanCellContentIntoOceanCell(OceanCellContent newOceanCellContent){}
 
     public ArrayList<OceanCellContent> getCellContent(){
         return cellContent;

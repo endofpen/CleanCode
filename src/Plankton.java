@@ -1,5 +1,6 @@
 public class Plankton implements OceanCellContent{
     private final String kindOfCellContent;
+    private OceanCell currentOceanCell;
     private int nutritionValue;
 
     public Plankton(String kindOfCellContent, int nutritionValue) {
@@ -12,7 +13,8 @@ public class Plankton implements OceanCellContent{
         return kindOfCellContent;
     }
 
-    public void retrieveNutritionValueAndClearCellContent(){
-
+    public int retrieveNutritionValueAndClearCellContent(){
+    currentOceanCell.eraseOceanCellContentFromOceanCell(this);
+    return nutritionValue;
     }
 }
