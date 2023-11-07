@@ -1,12 +1,12 @@
-public class Rock implements OceanCellContent{
-    private final String kindOfCellContent;
+public class Rock extends OceanCellContent {
 
-    public Rock(String kindOfCellContent) {
-        this.kindOfCellContent = kindOfCellContent;
+    public Rock(String kindOfCellContent,OceanCell currentOceanCell) {
+       super(kindOfCellContent,currentOceanCell);
     }
 
     @Override
-    public String getKindOfCellContent() {
-        return null;
+    public void executeNextSimulationTurn() {
+
     }
+
 }

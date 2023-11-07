@@ -1,17 +1,11 @@
-public class Shark implements IOceanAnimals{
-    private final String kindOfOceanCellContent;
+public class Shark extends OceanAnimals {
 
-    public Shark(String kindOfOceanCellContent) {
-        this.kindOfOceanCellContent = kindOfOceanCellContent;
+    public Shark(String kindOfOceanCellContent, OceanCell currentOceanCell) {
+        super(kindOfOceanCellContent, currentOceanCell);
     }
 
     @Override
     public void executeNextSimulationTurn() {
-
     }
 
-    @Override
-    public String getKindOfCellContent() {
-        return kindOfOceanCellContent;
-    }
 }

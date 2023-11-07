@@ -1,15 +1,12 @@
 import java.util.ArrayList;
 import java.util.Optional;
 
-public class Fish implements IOceanAnimals {
+public class Fish extends OceanAnimals {
     private int weight;
-    private OceanCell currentOceanCell;
 
-    private final String kindOfCellContent;
-
-    public Fish(int weight, String kindOfCellContent) {
+    public Fish(int weight, String kindOfCellContent, OceanCell currentOceanCell) {
+        super(kindOfCellContent, currentOceanCell);
         this.weight = weight;
-        this.kindOfCellContent = kindOfCellContent;
     }
 
     @Override
@@ -33,16 +30,12 @@ public class Fish implements IOceanAnimals {
         neighboringOceanCell.putNewOceanCellContentIntoOceanCell(this);
     }
 
-    @Override
-    public String getKindOfCellContent() {
-        return this.kindOfCellContent;
-    }
-
     private int calculateNewDirection() {
         return 0;
     }
 
     private void grow(int nutritionValue) {
+        this.weight += nutritionValue;
     }
 
     private Optional<OceanCellContent> searchThroughListForPlankton(ArrayList<OceanCellContent> oceanCellContents) {

@@ -1,20 +1,18 @@
-public class Plankton implements OceanCellContent{
-    private final String kindOfCellContent;
-    private OceanCell currentOceanCell;
+public class Plankton extends OceanCellContent{
     private int nutritionValue;
 
-    public Plankton(String kindOfCellContent, int nutritionValue) {
-        this.kindOfCellContent = kindOfCellContent;
+    public Plankton(int nutritionValue, String kindOfCellContent, OceanCell currentOceanCell) {
+        super(kindOfCellContent,currentOceanCell);
         this.nutritionValue = nutritionValue;
-    }
-
-    @Override
-    public String getKindOfCellContent() {
-        return kindOfCellContent;
     }
 
     public int retrieveNutritionValueAndClearCellContent(){
     currentOceanCell.eraseOceanCellContentFromOceanCell(this);
     return nutritionValue;
+    }
+
+    @Override
+    public void executeNextSimulationTurn() {
+
     }
 }
