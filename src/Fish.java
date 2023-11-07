@@ -3,10 +3,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
-public class Fish extends OceanAnimals {
+public class Fish extends OceanAnimal {
     private final List<String> blockingOceanCellContent = List.of("Shark", "Fish", "Rock");
+
     public Fish(int weight, String kindOfCellContent, OceanCell currentOceanCell) {
         super(kindOfCellContent, currentOceanCell,weight);
+        System.out.println("Constructor Fish");
     }
 
     @Override
@@ -55,6 +57,9 @@ public class Fish extends OceanAnimals {
 
     private void grow(int nutritionValue) {
         this.weight += nutritionValue;
+    }
+    public void getAttributes(){
+        System.out.println(this.weight + " " +this.currentOceanCell +" "+" i am Fish");
     }
 
 }

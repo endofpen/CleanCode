@@ -1,7 +1,7 @@
-public class Shark extends OceanAnimals {
+public class Shark extends OceanAnimal {
 
-    public Shark(String kindOfOceanCellContent, OceanCell currentOceanCell) {
-        super(kindOfOceanCellContent, currentOceanCell);
+    public Shark(int weight,String kindOfOceanCellContent, OceanCell currentOceanCell) {
+        super(kindOfOceanCellContent, currentOceanCell,weight);
     }
 
     @Override
