@@ -9,7 +9,7 @@ public class Ocean {
         if (instance == null) instance = new Ocean();
         return instance;
     }
-    public OceanCell retrieveNeighborOceanCell(OceanCellContent currentOceanCell, int direction){
+    public OceanCell retrieveNeighborOceanCell(OceanCellContent currentOceanCell, Directions direction){
         return null;
     }
     public ArrayList<OceanCell> getOceanContent(){

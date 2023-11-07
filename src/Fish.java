@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Optional;
+import java.util.Random;
 
 public class Fish extends OceanAnimals {
     private int weight;
@@ -11,7 +12,7 @@ public class Fish extends OceanAnimals {
 
     @Override
     public void executeNextSimulationTurn() {
-        int newDirection = calculateNewDirection();
+        Directions newDirection = calculateNewDirection();
         OceanCell neighboringOceanCell = Ocean.getInstance().retrieveNeighborOceanCell(this, newDirection);
         ArrayList<OceanCellContent> neighboringOceanCellContents = neighboringOceanCell.getCellContent();
         Optional<OceanCellContent> optionalOceanCellContentWithPlankton = searchThroughListForPlankton(neighboringOceanCellContents);
@@ -30,8 +31,9 @@ public class Fish extends OceanAnimals {
         neighboringOceanCell.putNewOceanCellContentIntoOceanCell(this);
     }
 
-    private int calculateNewDirection() {
-        return 0;
+    private Directions calculateNewDirection() {
+        int randomDirectionKey = new Random().nextInt(1 - 5);
+        return DirectionService.getInstance().retrieveDirectionByKey(randomDirectionKey);
     }
 
     private void grow(int nutritionValue) {
