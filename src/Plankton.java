@@ -1,5 +1,5 @@
 public class Plankton extends OceanCellContent{
-    private int nutritionValue;
+    private final int nutritionValue;
 
     public Plankton(int nutritionValue, String kindOfCellContent, OceanCell currentOceanCell) {
         super(kindOfCellContent,currentOceanCell);
@@ -7,7 +7,7 @@ public class Plankton extends OceanCellContent{
     }
 
     public int retrieveNutritionValueAndRemovePlanktonFromOceanCell(){
-    currentOceanCell.eraseOceanCellContentFromOceanCell(this);
+    super.getCurrentOceanCell().eraseOceanCellContentFromOceanCell(this);
     return nutritionValue;
     }
 

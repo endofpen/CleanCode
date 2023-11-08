@@ -10,9 +10,10 @@ public class Ocean {
         if (instance == null) instance = new Ocean();
         return instance;
     }
-    public Optional<OceanCell> retrieveNeighborOceanCell(OceanCellContent currentOceanCell, Directions direction){
-        return Optional.empty();
+    public OceanCell[] retrieveNeighboringOceanCells(OceanCellContent currentOceanCellContent){
+        return new OceanCell[8];
     }
+
     public ArrayList<OceanCell> getOceanContent(){
         return new ArrayList<OceanCell>();
     }
